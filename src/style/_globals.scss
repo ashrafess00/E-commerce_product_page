@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  line-height: 30px;
+}
+
+ul {
+  list-style: none;
+}
+
+@mixin centerAbs() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.d-flex {
+  display: flex;
+  &.s-b {
+    justify-content: space-between;
+  }
+  &.ai-c {
+    align-items: center;
+  }
+  &.column {
+    flex-direction: column;
+  }
+  &.gap-1 {
+    gap: 1rem;
+  }
+  &.gap-2 {
+    gap: 2rem;
+  }
+}
+
+.icon {
+  width: 1.5rem;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+.fw-700 {
+  font-weight: 700;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+.ml-1 {
+  margin-left: 1rem;
+}
+.ml-2 {
+  margin-left: 2rem;
+}
+
+.mb-all-1 {
+  > * {
+    margin-bottom: 1rem;
+  }
+}
+.mb-all-2 {
+  > * {
+    margin-bottom: 2rem;
+  }
+}
+.primary-color {
+  color: $Orange;
+}
+
+h2 {
+  color: $very-dark-blue;
+}
+
+p {
+  color: $grey;
+}
+
+.c-p {
+  cursor: pointer;
+}
+
+// fontsize
+.fs-1 {
+  font-size: 1rem;
+}
+.fs-2 {
+  font-size: 2rem;
+}
+.fs-3 {
+  font-size: 3rem;
+}
+.fs-4 {
+  font-size: 4rem;
+}

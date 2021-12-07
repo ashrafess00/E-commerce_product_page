@@ -1,0 +1,103 @@
+@mixin arrow($w: 3rem, $h: 3rem, $m: 1rem) {
+  position: absolute;
+  width: $w;
+  height: $h;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  cursor: pointer;
+  img {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: auto;
+  }
+  &:nth-child(1) {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: $m;
+  }
+  &:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: $m;
+  }
+}
+
+.products {
+  position: relative;
+  display: table;
+
+  .arrow {
+    @include arrow();
+  }
+
+  .productImgs {
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+    display: block;
+    top: 0;
+    bottom: 0;
+    &.hide {
+      height: 0;
+      opacity: 0.5;
+    }
+    &.show {
+      height: auto;
+      opacity: 1;
+    }
+  }
+}
+
+.box {
+  background-color: $Orange;
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  margin: auto;
+  text-align: center;
+  border: none;
+  border-radius: $radius;
+  margin-bottom: 1rem;
+}
+.box-grey {
+  @extend .box;
+  background-color: $light-grey;
+  color: $very-dark-blue;
+  font-weight: 700;
+  .icon {
+    width: 1rem;
+    cursor: pointer;
+  }
+}
+
+// 50%
+.discount {
+  background-color: $light-orange;
+  color: $Orange;
+  border-radius: $radius;
+  padding: 1px 5px;
+  font-size: 1rem;
+}
+// 250$
+.discountPrice {
+  margin-left: auto;
+}
+
+.mainImg {
+  display: block;
+}
+
+#displayZoomProducts {
+  display: none;
+  @include centerAbs();
+  z-index: 10000;
+  width: 40%;
+}
+
+.box {
+  cursor: pointer;
+}

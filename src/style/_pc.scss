@@ -1,0 +1,147 @@
+@use "buySection";
+@media (min-width: 900px) {
+  header {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.151);
+    padding: initial;
+    padding-top: 1.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .itemInCart {
+    width: 40%;
+    right: 4rem;
+  }
+
+  .humIcon {
+    display: none;
+  }
+  .menu {
+    position: initial;
+    left: 0;
+    top: 0;
+    height: initial;
+    z-index: initial;
+    padding: initial;
+    background-color: transparent;
+    margin-left: 2rem;
+    visibility: initial;
+    transition: initial;
+    left: initial;
+    width: 35rem;
+    color: $grey;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        margin-bottom: initial;
+        position: relative;
+        cursor: pointer;
+        padding-bottom: 1.5rem;
+        &:hover::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          height: 3px;
+          background-color: $Orange;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .buySection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 9rem;
+    align-items: center;
+    gap: 6rem;
+    .secondSec {
+      > *:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+    .arrow {
+      display: none;
+    }
+    .zoomCon {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .productsCon {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        img {
+          border-radius: $radius;
+        }
+      }
+    }
+    .mainImg {
+      width: 100%;
+      display: block;
+      position: relative;
+
+      .sin {
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        top: -1.5rem;
+        right: 0;
+        cursor: pointer;
+        &::before {
+          content: "";
+          position: absolute;
+          height: 3px;
+          width: 100%;
+          transform: rotate(45deg);
+          background-color: $light-grey;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          height: 3px;
+          width: 100%;
+          transform: rotate(-45deg);
+          background-color: $light-grey;
+        }
+      }
+      .arrow-zoom {
+        @include arrow(3.5rem, 3.5rem, -2rem);
+      }
+      img {
+        border-radius: $radius + 10px;
+      }
+    }
+
+    .products {
+      display: flex;
+
+      .productsCon {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        justify-content: space-between;
+        &.products1 {
+          padding: initial;
+        }
+        img {
+          height: auto;
+          opacity: 1;
+          cursor: pointer;
+          border-radius: $radius;
+        }
+      }
+    }
+    .boxes {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}

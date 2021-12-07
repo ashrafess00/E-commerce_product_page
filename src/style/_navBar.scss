@@ -1,0 +1,138 @@
+header {
+  padding: 1rem;
+  justify-content: center;
+}
+.humIcon {
+  height: 26px;
+  position: relative;
+  z-index: 1000;
+  span {
+    width: 100%;
+    height: 5px;
+    background-color: $grey;
+    transition: all 0.5s;
+    align-self: center;
+    position: absolute;
+    display: block;
+    &:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:nth-child(3) {
+      bottom: 0;
+    }
+  }
+}
+
+.humIcon.clicked {
+  position: relative;
+  span:nth-child(1) {
+    transform: rotate(45deg) translateY(300%);
+  }
+  span:nth-child(2) {
+    transform: translate(-50px);
+    visibility: hidden;
+  }
+  span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-300%);
+  }
+}
+
+.icon {
+  position: relative;
+  cursor: pointer;
+
+  .cartCount {
+    position: absolute;
+    line-height: initial;
+    top: -5px;
+    right: 0;
+    font-size: 9px;
+    z-index: 1000;
+    background-color: orange;
+    padding: 3px 6px;
+    border-radius: 1rem;
+  }
+}
+
+.itemInCart {
+  position: absolute;
+  background-color: white;
+  margin: auto;
+  border-radius: 1rem;
+  top: 10vh;
+  z-index: 1000;
+  width: 95%;
+  padding: 0.5rem;
+  display: none;
+  box-shadow: 0px 5px 14px #000000e6;
+  &.open {
+    display: block;
+  }
+}
+
+.cartBox {
+  .thumb {
+    width: 3.5rem;
+    margin-right: 1rem;
+  }
+  .bin {
+    width: 1rem;
+    margin-left: auto;
+  }
+}
+
+.cartIsEmpty {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 1;
+  padding: 5rem 7rem 0 2rem;
+  background-color: white;
+  visibility: hidden;
+  transition: all 1s;
+  left: -70%;
+  width: 70%;
+  &.show {
+    visibility: visible;
+    left: 0;
+  }
+}
+
+.avatar,
+.cartIcon {
+  padding-bottom: 1.5rem;
+}
+
+.avatar {
+  width: 2.5rem;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 50%;
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
+  img {
+    width: 100%;
+  }
+  &:hover {
+    outline: $Orange 2px solid;
+    border-radius: 50%;
+  }
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.699);
+}
