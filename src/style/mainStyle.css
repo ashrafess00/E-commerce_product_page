@@ -210,6 +210,7 @@ header {
   background-color: orange;
   padding: 3px 6px;
   border-radius: 1rem;
+  color: white;
 }
 
 .itemInCart {
@@ -217,17 +218,29 @@ header {
   background-color: white;
   margin: auto;
   border-radius: 1rem;
-  top: 10vh;
   z-index: 1000;
   width: 95%;
   padding: 0.5rem;
   display: none;
+  left: 0;
+  right: 0;
+  top: 12vh;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-box-shadow: 0px 5px 14px #000000e6;
           box-shadow: 0px 5px 14px #000000e6;
 }
 
 .itemInCart.open {
   display: block;
+}
+
+.cartBox h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 90%;
+  font-weight: bold;
 }
 
 .cartBox .thumb {
@@ -430,8 +443,9 @@ header {
     border-radius: 50%;
   }
   .itemInCart {
-    width: 40%;
+    width: 30%;
     right: 4rem;
+    left: initial;
   }
   .humIcon {
     display: none;

@@ -56,6 +56,7 @@ header {
     background-color: orange;
     padding: 3px 6px;
     border-radius: 1rem;
+    color: white;
   }
 }
 
@@ -64,11 +65,16 @@ header {
   background-color: white;
   margin: auto;
   border-radius: 1rem;
-  top: 10vh;
   z-index: 1000;
   width: 95%;
   padding: 0.5rem;
   display: none;
+
+  left: 0;
+  right: 0;
+  top: 12vh;
+  margin-left: auto;
+  margin-right: auto;
   box-shadow: 0px 5px 14px #000000e6;
   &.open {
     display: block;
@@ -76,6 +82,13 @@ header {
 }
 
 .cartBox {
+  h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
+    font-weight: bold;
+  }
   .thumb {
     width: 3.5rem;
     margin-right: 1rem;

@@ -89,7 +89,7 @@ const Cart = (props) => {
         <img src={props.image} alt="" />
       </div>
       <div>
-        <div>Fall Limited Edition Sneakers</div>
+        <h4>Fall Limited Edition Sneakers</h4>
         <div>
           {props.price} x {props.count} <b>${props.price * props.count}</b>
         </div>
