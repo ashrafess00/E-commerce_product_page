@@ -254,8 +254,10 @@ header {
   padding: 5rem 7rem 0 2rem;
   background-color: white;
   visibility: hidden;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
   left: -70%;
   width: 70%;
 }
@@ -319,6 +321,7 @@ header {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   margin-left: 1rem;
+  z-index: 0;
 }
 
 .products .productsCon {
@@ -580,6 +583,7 @@ header {
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     margin-left: -2rem;
+    z-index: 0;
   }
   .buySection .mainImg img {
     border-radius: 17px;
