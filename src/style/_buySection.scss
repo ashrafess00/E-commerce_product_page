@@ -35,6 +35,9 @@
     @include arrow();
   }
 
+  .productsCon {
+    display: none;
+  }
   .productImgs {
     transition: all 0.5s;
     transition-timing-function: ease-in-out;

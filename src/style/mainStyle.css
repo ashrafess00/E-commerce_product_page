@@ -125,11 +125,25 @@ p {
   font-size: 4rem;
 }
 
+.attribution {
+  bottom: 0;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
 header {
   padding: 1rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 10vh;
+  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .humIcon {
@@ -251,29 +265,6 @@ header {
   left: 0;
 }
 
-.avatar,
-.cartIcon {
-  padding-bottom: 1.5rem;
-}
-
-.avatar {
-  width: 2.5rem;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 50%;
-  height: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.avatar img {
-  width: 100%;
-}
-
-.avatar:hover {
-  outline: #ff7d1a 2px solid;
-  border-radius: 50%;
-}
-
 #overlay {
   position: fixed;
   display: none;
@@ -328,6 +319,10 @@ header {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   margin-left: 1rem;
+}
+
+.products .productsCon {
+  display: none;
 }
 
 .products .productImgs {
@@ -412,6 +407,24 @@ header {
     padding-top: 1.5rem;
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+  header .cartIcon {
+    padding-bottom: 1.5rem;
+  }
+  header .avatar {
+    width: 2.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50%;
+    height: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  header .avatar img {
+    width: 100%;
+  }
+  header .avatar:hover {
+    outline: #ff7d1a 2px solid;
+    border-radius: 50%;
   }
   .itemInCart {
     width: 40%;

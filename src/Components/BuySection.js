@@ -18,16 +18,6 @@ const BuySection = () => {
   const zoomCon = useRef(null);
   const overlay = useRef(null);
 
-  useEffect(() => {
-    let product = document.querySelectorAll(".productImgs");
-    product.forEach((e) => {
-      e.classList.remove("show");
-      e.classList.add("hide");
-    });
-    product[itemIdx].classList.remove("hide");
-    product[itemIdx].classList.add("show");
-  }, [itemIdx]);
-
   let clicked = false;
   const zoom = () => {
     if (!clicked && window.innerWidth > 1000) {
@@ -146,7 +136,7 @@ const BuySection = () => {
   );
 };
 
-const Products = (props) => {
+const Products = memo((props) => {
   return (
     <div className={`productsCon ${props.products1}`}>
       {props.images.map((img, idx) => {
@@ -162,6 +152,6 @@ const Products = (props) => {
       })}
     </div>
   );
-};
+});
 
 export default BuySection;
